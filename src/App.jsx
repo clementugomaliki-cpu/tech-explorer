@@ -1,12 +1,12 @@
+import React from 'react'
 import TechKidsCourses from './Components/TechKidsCourses';
+
 import logo from "./images/olotuLogo.png";
 import profileImage from "./images/right-grid-boy-photo.png"
 import rectangleImage from "./images/Rectangle.png";
 import brainImage from "./images/brain.png";
 import settingsIcon from "./images/settings.png";
 import bulbImage from "./images/light-bulb.png";
-import Form from "./Form";
-
 
 function App() {
   const coursesCard = [
@@ -18,17 +18,16 @@ function App() {
     <div>
       <div className='bg-[#F59E0B] flex justify-between items-center fixed top-0 right-0 left-0'>
         <div>
-          <img src={logo} alt="olotu square logo" className="w-50 py-3 pl-10" />
+          <img src={logo} alt="olotu square logo" className='w-50 py-3 pl-10'/>
         </div>
-        <button className="bg-white text-[#F59E0B] mr-10 px-9 cursor-pointer rounded-xl h-10">
-          Register Now
-        </button>
+        <button className='bg-white text-[#F59E0B] mr-10 px-8 text-[20px] cursor-pointer rounded-xl font-inter h-10'>Register Now</button>
       </div>
-      <div className="grid grid-cols-2">
-        <div className="flex items-center justify-center">
-          <p className="font-fredoka">
-            Tech Explorer's Bootcamp 2 <span>for kids aged 5-15</span>
-          </p>
+      <div className='grid grid-cols-2 mt-20'>
+        <div className='flex flex-col justify-center mx-auto'>
+         <div className='flex items-center'><p className='font-inter text-[20px]'>Tech Explorer's Bootcamp 2 <span className='bg-[#ECFDF5] text-[#10B981] font-fredoka-one text-[14px] ml-2 px-7 py-2 border border-[#10B981] rounded-3xl'>for kids aged 5-15</span></p></div>
+          <p className='text-[#F59E0B] font-fredoka-one text-[48px]'>Build solutions, <span className='font-fredoka-one text-[48px] block text-[#222222]'>not just think them!</span></p>
+          <p className='text-[#F59E0B] text-[32px] font-fredoka py-10'>Registration - ₦70,000, <span className='text-[#10B981] text-[24px] font-fredoka font-medium'>early bird ₦50,000</span></p>
+          <button className='bg-[#F59E0B] text-white font-inter w-50 px-8 text-[20px] cursor-pointer rounded-xl h-10'>Register Now</button>
         </div>
         <div className='flex justify-end items-center'>
           <img src={profileImage} alt="boy with toys" className='w-150' />
@@ -50,12 +49,16 @@ function App() {
         <h3 className='font-fredoka font-medium text-[32px]'>See the Magic in Action</h3>
         <p className='text-[16px] font-inter'>Highlights from our past cohorts</p>
         <div>
-          <img src={profileImage} alt="boy with toys" className="w-100" />
+          <p>Projects</p>
+          <p>Problem Solving</p>
+          <p>Lots of Games & Fun</p>
+          <p>Team Building</p>
+          <p>Collaboration</p>
+          <p>Networking</p>
         </div>
       </div>
-      <Form />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
