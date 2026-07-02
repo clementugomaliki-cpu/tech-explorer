@@ -123,6 +123,7 @@ function App() {
           <p>Networking</p>
         </div>
       </div>
+      <Form />
     </div>
   );
 }
