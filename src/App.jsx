@@ -1,6 +1,5 @@
 import React from 'react'
 import TechKidsCourses from './Components/TechKidsCourses';
-
 import logo from "./images/olotuLogo.png";
 import profileImage from "./images/right-grid-boy-photo.png"
 import rectangleImage from "./images/Rectangle.png";
