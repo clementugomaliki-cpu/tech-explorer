@@ -19,7 +19,7 @@ export default function Form() {
   };
 
   return (
-    <div className="m-9">
+    <div className="m-9" id="register-form">
       <div>
         <h2 className="font-fredoka font-semibold text-[32px] text-[#222222] text-center">
           Secure Your Child's Spot

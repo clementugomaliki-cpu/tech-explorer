@@ -57,9 +57,7 @@ function App() {
         <div>
           <img src={logo} alt="olotu square logo" className="w-50 py-3 pl-10" />
         </div>
-        <button className="bg-white text-[#F59E0B] mr-10 px-8 text-[20px] cursor-pointer rounded-xl font-inter h-10">
-          Register Now
-        </button>
+        <a href="#register-form" className="bg-white text-[#F59E0B] font-inter w-50 px-8 text-[20px] mr-10 cursor-pointer rounded-xl flex items-center justify-center h-10">Register Now</a>
       </div>
       <div className="grid grid-cols-2 mt-20">
         <div className="flex flex-col justify-center mx-auto">
@@ -83,9 +81,7 @@ function App() {
               early bird ₦50,000
             </span>
           </p>
-          <button className="bg-[#F59E0B] text-white font-inter w-50 px-8 text-[20px] cursor-pointer rounded-xl h-10">
-            Register Now
-          </button>
+          <a href="#register-form" className="bg-[#F59E0B] text-white justify-center font-inter w-50 px-8 text-[20px] cursor-pointer rounded-xl hover:opacity-[0.8] flex items-center h-10">Register Now</a>
         </div>
         <div className="flex justify-end items-center">
           <img src={profileImage} alt="boy with toys" className="w-150" />
@@ -105,13 +101,14 @@ function App() {
       <div className="grid grid-cols-3 gap-20 m-30">
         {coursesCard.map((course, index) => (
           <TechKidsCourses
+            key={index}
             logo={course.logo}
             header={course.title}
             text={course.description}
           />
         ))}
       </div>
-      <div className="flex flex-col justify-center items-center bg-gradient-to-t from-orange-100 to-white-100">
+      <div className="flex flex-col justify-center items-center bg-gradient-to-t from-orange-100 to-white">
         <h3 className="font-fredoka font-medium text-[32px] text-[#222222]">
           See the Magic in Action
         </h3>
