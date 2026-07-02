@@ -7,6 +7,10 @@ import brainImage from "./images/brain.png";
 import settingsIcon from "./images/settings.png";
 import bulbImage from "./images/light-bulb.png";
 import Form from "./Form.jsx";
+import frame1 from "./images/frame1.png";
+import frame2 from "./images/frame 2.png";
+import frame3 from "./images/frame3.png";
+import frame4 from "./images/frame4.png";
 
 function App() {
   const coursesCard = [
@@ -107,20 +111,35 @@ function App() {
           />
         ))}
       </div>
-      <div className="flex flex-col justify-center items-center">
-        <h3 className="font-fredoka font-medium text-[32px]">
+      <div className="flex flex-col justify-center items-center bg-gradient-to-t from-orange-100 to-white-100">
+        <h3 className="font-fredoka font-medium text-[32px] text-[#222222]">
           See the Magic in Action
         </h3>
-        <p className="text-[16px] font-inter">
+        <p className="text-[16px] font-inter text-[#F59E0B]">
           Highlights from our past cohorts
         </p>
-        <div>
-          <p>Projects</p>
-          <p>Problem Solving</p>
-          <p>Lots of Games & Fun</p>
-          <p>Team Building</p>
-          <p>Collaboration</p>
-          <p>Networking</p>
+        <div className="grid grid-cols-3 font-fredoka text-[24px] font-medium space-y-5 text-[#747070] gap-x-50 mt-15">
+          <p className="flex justify-center">Projects</p>
+          <p className="flex justify-center">Problem Solving</p>
+          <p className="flex justify-center">Lots of Games & Fun</p>
+          <p className="flex justify-center">Team Building</p>
+          <p className="flex justify-center">Collaboration</p>
+          <p className="flex justify-center">Networking</p>
+        </div>
+        <div className="flex justify-between m-20">
+          
+            <div>
+              <img src={frame1} alt="first children group photo"/>
+            </div>
+            <div >
+              <img src={frame2} alt="second children group photo" />
+            </div>
+            <div>
+              <img src={frame3} alt="third children group photo" />
+            </div>
+            <div>
+              <img src={frame4} alt="fourth children group photo" />
+            </div>
         </div>
       </div>
       <Form />
