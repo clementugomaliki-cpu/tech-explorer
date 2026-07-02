@@ -32,7 +32,7 @@ export default function Form() {
       </div>
       <form className="grid justify-items-center w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 border border-[#E1E1E1]  rounded-2xl w-full px-6 py-15">
-          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-[20px] font-[#222222]">
+          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-[20px] text-[#222222]">
             <label
               htmlFor="name"
               className="block font-inter font-regular text-[20px] text-[#222222]"
