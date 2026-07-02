@@ -53,7 +53,7 @@ function App() {
   ];
   return (
     <div>
-      <div className="bg-[#F59E0B] flex justify-between items-center fixed top-0 right-0 left-0">
+      <div className="bg-[#F59E0B] flex justify-between items-center fixed top-0 right-0 left-0 z-100">
         <div>
           <img src={logo} alt="olotu square logo" className="w-50 py-3 pl-10" />
         </div>
@@ -128,16 +128,16 @@ function App() {
         </div>
         <div className="flex justify-between m-20">
           
-            <div>
+            <div className="relative z-10">
               <img src={frame1} alt="first children group photo"/>
             </div>
-            <div >
+            <div className="relative z-20 -ml-10">
               <img src={frame2} alt="second children group photo" />
             </div>
-            <div>
+            <div className="relative -ml-10 z-30">
               <img src={frame3} alt="third children group photo" />
             </div>
-            <div>
+            <div className="relative -ml-10 z-40">
               <img src={frame4} alt="fourth children group photo" />
             </div>
         </div>
