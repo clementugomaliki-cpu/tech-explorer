@@ -41,7 +41,7 @@ export default function Form() {
             </label>
             <input type="text" id="name" className={input} />
           </div>
-          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-[20px] font-[#222222]">
+          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-[20px] text-[#222222]">
             <label
               htmlFor="age"
               className="block font-inter font-regular text-[20px] text-[#222222]"
@@ -50,7 +50,7 @@ export default function Form() {
             </label>
             <input type="text" id="age" className={input} />
           </div>
-          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-[20px] font-[#222222]">
+          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-[20px] text-[#222222]">
             <label
               htmlFor="num"
               className="block font-inter font-regular text-[20px] text-[#222222]"
@@ -59,7 +59,7 @@ export default function Form() {
             </label>
             <input type="tel" id="num" className={input} />
           </div>
-          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-[20px] font-[#222222]">
+          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-[20px] text-[#222222]">
             <label
               htmlFor="email"
               className="block font-inter font-regular text-[20px] text-[#222222]"
@@ -68,7 +68,7 @@ export default function Form() {
             </label>
             <input type="email" id="email" className={input} />
           </div>
-          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-[20px] font-[#222222]">
+          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-[20px] text-[#222222]">
             <label
               htmlFor="pickup"
               className="block font-inter font-regular text-[20px] text-[#222222]"
@@ -77,7 +77,7 @@ export default function Form() {
             </label>
             <input type="text" id="pickup" className={input} />
           </div>
-          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-[20px] font-[#222222]">
+          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-[20px] text-[#222222]">
             <label
               htmlFor="picknum"
               className="block font-inter font-regular text-[20px] text-[#222222]"
