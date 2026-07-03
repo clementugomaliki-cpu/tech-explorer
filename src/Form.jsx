@@ -6,7 +6,8 @@ import cloud from "./images/cloud.png";
 import mark from "./images/mark.png";
 
 export default function Form() {
-  const input = "border border-[#E1E1E1] rounded-xl w-full focus:outline focus:outline-orange-500 px-3 py-3 sm:py-4 ";
+  const input =
+    "border border-[#E1E1E1] rounded-xl w-full focus:outline focus:outline-orange-500 px-3 py-3 sm:py-4 ";
   const fileInput = useRef(null);
   const [modal, setModal] = useState(false);
   const [formData, setFormData] = useState({
@@ -91,7 +92,6 @@ export default function Form() {
               Age
             </label>
 
-            <input type="text" id="age" className={input}  />
             <input
               type="text"
               id="age"
@@ -100,7 +100,6 @@ export default function Form() {
               value={formData.age}
               onChange={handleChange}
             />
-
           </div>
           <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
             <label
@@ -109,7 +108,6 @@ export default function Form() {
             >
               Guardian's phone number
             </label>
-            <input type="tel" id="num" className={input}  />
             <input
               type="tel"
               id="num"
@@ -127,7 +125,6 @@ export default function Form() {
               Guardian's email address
             </label>
 
-            <input type="email" id="email" className={input}  />
             <input
               type="email"
               id="email"
@@ -136,7 +133,6 @@ export default function Form() {
               value={formData.guardian_email}
               onChange={handleChange}
             />
-
           </div>
           <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
             <label
