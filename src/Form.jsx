@@ -116,6 +116,7 @@ export default function Form() {
               name="child_name"
               value={formData.child_name}
               onChange={handleChange}
+              required
             />
           </div>
           <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
@@ -133,6 +134,7 @@ export default function Form() {
               name="age"
               value={formData.age}
               onChange={handleChange}
+              required
             />
           </div>
           <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
@@ -149,6 +151,7 @@ export default function Form() {
               name="guardian_phone"
               value={formData.guardian_phone}
               onChange={handleChange}
+              required
             />
           </div>
           <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
@@ -166,6 +169,7 @@ export default function Form() {
               name="guardian_email"
               value={formData.guardian_email}
               onChange={handleChange}
+              required
             />
           </div>
           <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
@@ -182,6 +186,7 @@ export default function Form() {
               name="pickup_name"
               value={formData.pickup_name}
               onChange={handleChange}
+              required
             />
           </div>
           <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
@@ -198,6 +203,7 @@ export default function Form() {
               name="pickup_phone"
               value={formData.pickup_phone}
               onChange={handleChange}
+              required
             />
           </div>
           <div className="flex flex-col gap-3 mb-3 md:flex-row md:items-center">
@@ -218,11 +224,25 @@ export default function Form() {
             className="cursor-pointer flex justify-center items-center mt-2 mb-6 sm:mb-8 md:mb-10 border-[#FBBF24] border-2 border-dashed rounded-2xl py-10 sm:py-14 md:py-18 px-6 sm:px-10 md:px-15 bg-[#FFF8E7] md:col-span-2 "
           >
             <div className="flex flex-col sm:flex-row items-center gap-2 w-full md:justify-center text-center sm:text-left">
-              <img src={cloud} alt="cloud" className=" size-6" />
-
-              <div className="text-center font-inter font-light text-sm sm:text-base text-[#222222] ">
-                <p>Drag & drop or click upload </p>
-                <p>[PNG,JPEG,PDF]</p>
+              <img
+                src={file ? mark : cloud}
+                alt={file ? "File selected" : "Upload"}
+                className="size-6"
+              />
+              <div className="text-center font-inter font-light text-sm sm:text-base text-[#222222]">
+                {file ? (
+                  <>
+                    <p className="font-medium text-green-600"> {file.name}</p>
+                    <p className="text-xs text-gray-500">
+                      Click to choose another file
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p>Drag & drop or click upload</p>
+                    <p>[PNG, JPEG, PDF]</p>
+                  </>
+                )}
               </div>
 
               <input
