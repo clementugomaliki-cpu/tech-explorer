@@ -6,7 +6,7 @@ import cloud from "./images/cloud.png";
 import mark from "./images/mark.png";
 
 export default function Form() {
-  const input = "border border-[#E1E1E1] rounded-xl w-full px-3 py-4 ";
+  const input = "border border-[#E1E1E1] rounded-xl w-full px-3 py-3 sm:py-4 ";
   const fileInput = useRef(null);
   const [modal, setModal] = useState(false);
   const [formData, setFormData] = useState({
@@ -51,14 +51,14 @@ export default function Form() {
   };
 
   return (
-    <div className="m-9">
+    <div className="mx-4 my-6 sm:mx-6 sm:my-8 md:m-9" id="register-form">
       <div>
-        <h2 className="font-fredoka font-semibold text-[32px] text-[#222222] text-center">
+        <h2 className="font-fredoka font-semibold text-2xl sm:text-3xl md:text-[32px] text-[#222222] text-center">
           Secure Your Child's Spot
         </h2>
       </div>
-      <div className="mb-10">
-        <p className="text-[#747070] text-base font-inter font-normal text-center ">
+      <div className="mb-6 sm:mb-8 md:mb-10">
+        <p className="text-[#747070] text-sm sm:text-base font-inter font-normal text-center ">
           Fill in the details below to complete registration
         </p>
       </div>
@@ -70,7 +70,7 @@ export default function Form() {
           <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-[20px] text-[#222222]">
             <label
               htmlFor="name"
-              className="block font-inter font-regular text-[20px] text-[#222222]"
+              className="block font-inter font-regular text-base sm:text-lg md:text-[20px] text-[#222222]"
             >
               Child's full name
             </label>
@@ -83,10 +83,10 @@ export default function Form() {
               onChange={handleChange}
             />
           </div>
-          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-[20px] text-[#222222]">
+          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
             <label
               htmlFor="age"
-              className="block font-inter font-regular text-[20px] text-[#222222]"
+              className="block font-inter font-regular text-base sm:text-lg md:text-[20px] text-[#222222]"
             >
               Age
             </label>
@@ -99,10 +99,10 @@ export default function Form() {
               onChange={handleChange}
             />
           </div>
-          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-[20px] text-[#222222]">
+          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
             <label
               htmlFor="num"
-              className="block font-inter font-regular text-[20px] text-[#222222]"
+              className="block font-inter font-regular text-base sm:text-lg md:text-[20px] text-[#222222]"
             >
               Guardian's phone number
             </label>
@@ -115,10 +115,10 @@ export default function Form() {
               onChange={handleChange}
             />
           </div>
-          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-[20px] text-[#222222]">
+          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
             <label
               htmlFor="email"
-              className="block font-inter font-regular text-[20px] text-[#222222]"
+              className="block font-inter font-regular text-base sm:text-lg md:text-[20px] text-[#222222]"
             >
               Guardian's email address
             </label>
@@ -131,10 +131,10 @@ export default function Form() {
               onChange={handleChange}
             />
           </div>
-          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-[20px] text-[#222222]">
+          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
             <label
               htmlFor="pickup"
-              className="block font-inter font-regular text-[20px] text-[#222222]"
+              className="block font-inter font-regular text-base sm:text-lg md:text-[20px] text-[#222222]"
             >
               Name of pick up person
             </label>
@@ -147,10 +147,10 @@ export default function Form() {
               onChange={handleChange}
             />
           </div>
-          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-[20px] text-[#222222]">
+          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
             <label
               htmlFor="picknum"
-              className="block font-inter font-regular text-[20px] text-[#222222]"
+              className="block font-inter font-regular text-base sm:text-lg md:text-[20px] text-[#222222]"
             >
               Phone number of pick up person
             </label>
@@ -164,10 +164,10 @@ export default function Form() {
             />
           </div>
           <div className="flex flex-col gap-3 mb-3 md:flex-row md:items-center">
-            <p className="font-inter font-normal text-[20px] text-[#222222]">
+            <p className="font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
               Upload payment evidence
             </p>
-            <div className="border border-[#D6D3D3] w-70 px-4 py-1 rounded-3xl ">
+            <div className="border border-[#D6D3D3] w-full sm:w-70 px-4 py-1 rounded-3xl ">
               <div className="flex items-center gap-2">
                 <img src={bank} alt="bank" className="size-6" />
                 <p className="font-inter font-light text-[12px] text-[#222222]">
@@ -178,12 +178,13 @@ export default function Form() {
           </div>
           <div
             onClick={handleClick}
-            className="cursor-pointer flex justify-center items-center mt-2 mb-10  border-[#FBBF24] border-2 border-dashed rounded-2xl py-18 px-15 bg-[#FFF8E7] md:col-span-2 "
+            className="cursor-pointer flex justify-center items-center mt-2 mb-6 sm:mb-8 md:mb-10 border-[#FBBF24] border-2 border-dashed rounded-2xl py-10 sm:py-14 md:py-18 px-6 sm:px-10 md:px-15 bg-[#FFF8E7] md:col-span-2 "
           >
-            <div className="flex items-center gap-2 w-full md:justify-center ">
+            <div className="flex flex-col sm:flex-row items-center gap-2 w-full md:justify-center text-center sm:text-left">
               <img src={cloud} alt="cloud" className=" size-6" />
-              <div className="text-center  font-inter font-light text-base text-[#222222] ">
-                <p className="whitespace-nowrap">Drag & drop or click upload</p>
+
+              <div className="text-center font-inter font-light text-sm sm:text-base text-[#222222] ">
+                <p>Drag & drop or click upload </p>
                 <p>[PNG,JPEG,PDF]</p>
               </div>
 
@@ -198,42 +199,44 @@ export default function Form() {
           <div className="  flex items-center justify-center  mb-2  w-full  py-3 md:col-span-2 ">
             <button
               type="submit"
-              className=" bg-[#F59E0B] cursor-pointer font-inter w-full  rounded-[10px] font-normal text-[20px] px-6 py-2  text-[#FFFFFF] max-w-sm"
+              className=" bg-[#F59E0B] cursor-pointer font-inter w-full  rounded-[10px] font-normal text-base sm:text-lg md:text-[20px] px-6 py-2  text-[#FFFFFF] max-w-sm"
             >
               Submit Registration
             </button>
           </div>
           <div className="flex items-center justify-center md:col-span-2">
-            <div className="flex items-center gap-2">
-              <img src={mark} alt="mark" className="size-6" />
-              <p className="font-inter font-light text-base text-[#222222]">
+            <div className="flex items-center gap-2 text-center sm:text-left">
+              <img src={mark} alt="mark" className="size-6 shrink-0" />
+              <p className="font-inter font-light text-sm sm:text-base text-[#222222]">
                 You'll receive a confirmation email within 24hours after
                 registration
               </p>
             </div>
           </div>
         </div>
-        <div className=" flex items-center flex-col gap-3 md:flex-row md:justify-between md:w-full mt-20 text-[#D6D3D3] font-inter font-normal text-base">
+        <div className=" flex items-center flex-col gap-3 md:flex-row md:justify-between md:w-full mt-12 sm:mt-16 md:mt-20 text-[#D6D3D3] font-inter font-normal text-sm sm:text-base text-center">
           <p>&copy; Tech Explorers Bootcamp 2026</p>
           <p>hello@olotusquare.ng</p>
         </div>
         {modal && (
-          <div className="bg-black/50 z-1000 fixed inset-0 flex items-center justify-center h-screen ">
-            <div className="bg-[#FFFFFF] px-20 py-15 rounded-2xl max-sm:px-8 max-sm:py-10 max-sm:mx-4 max-sm:w-full max-sm:max-w-sm">
+          <div className="bg-black/50 z-1000 fixed inset-0 flex items-center justify-center h-screen px-4">
+            <div className="bg-[#FFFFFF] px-8 py-10 sm:px-12 sm:py-12 md:px-20 md:py-15 rounded-2xl w-full max-w-sm sm:max-w-md md:max-w-lg">
               <div className="flex flex-col items-center justify-center">
-                <img src={mark} alt="mark" className="size-30.25" />
-                <div className="font-inter font-light text-[20px]">
+                <img
+                  src={mark}
+                  alt="mark"
+                  className="size-16 sm:size-20 md:size-30.25"
+                />
+                <div className="font-inter font-light text-base sm:text-lg md:text-[20px] text-center">
                   <p>Thank you for registration!</p>
                 </div>
-                <div className="mt-5 font-inter font-light text-base">
-                  <p className="whitespace-nowrap">
-                    You will receive a confirmation mail within 24 hours
-                  </p>
+                <div className="mt-5 font-inter font-light text-sm sm:text-base text-center">
+                  <p>You will receive a confirmation mail within 24 hours</p>
                 </div>
                 <div className="w-full flex items-center justify-center mt-8">
                   <button
                     onClick={() => setModal(false)}
-                    className=" bg-[#F59E0B] w-64 cursor-pointer font-inter text-[#FFFFFF]  rounded-xl font-normal text-[20px] py-2"
+                    className=" bg-[#F59E0B] w-full max-w-64 cursor-pointer font-inter text-[#FFFFFF]  rounded-xl font-normal text-base sm:text-lg md:text-[20px] py-2"
                   >
                     Return
                   </button>
