@@ -53,14 +53,22 @@ function App() {
   ];
 
   return (
-  
-    <div >
+    <div>
       <header className="bg-[#F59E0B] flex justify-between items-center fixed top-0 right-0 left-0 z-50 px-3 sm:px-6 lg:px-10 py-2">
-        <img src={logo} alt="olotu square logo" className="w-24 sm:w-32 md:w-40 lg:w-50" />
-        <a href="#register-form"  className="bg-white text-[#F59E0B] font-inter px-3 sm:px-5 lg:px-8 text-xs sm:text-sm md:text-base lg:text-[20px] cursor-pointer rounded-xl flex items-center justify-center h-8 sm:h-9 lg:h-10">Register Now</a> 
+        <img
+          src={logo}
+          alt="olotu square logo"
+          className="w-24 sm:w-32 md:w-40 lg:w-50"
+        />
+        <a
+          href="#register-form"
+          className="bg-white text-[#F59E0B] font-inter px-3 sm:px-5 lg:px-8 text-xs sm:text-sm md:text-base lg:text-[20px] cursor-pointer rounded-xl flex items-center justify-center h-8 sm:h-9 lg:h-10"
+        >
+          Register Now
+        </a>
       </header>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 pt-20 sm:pt-24 md:pt-28 px-4 sm:px-6 md:px-10">
-        <div className="flex flex-col justify-center text-left md:items-start text-center md:text-left mx-auto md:mx-0 max-w-xl">
+        <div className="flex flex-col justify-center text-left md:items-start  md:text-left mx-auto md:mx-0 max-w-xl">
           <div className="flex flex-col text-left sm:flex-row sm:items-center gap-2 sm:gap-0">
             <p className="font-inter text-sm sm:text-base md:text-lg lg:text-[20px]">
               Tech Explorer's Bootcamp 2
@@ -82,8 +90,8 @@ function App() {
             </span>
           </p>
 
-          
-          <a  href="#register-form"
+          <a
+            href="#register-form"
             className="bg-[#F59E0B] text-white font-inter px-8 text-base sm:text-lg lg:text-[20px] cursor-pointer rounded-xl hover:opacity-80 flex items-center justify-center h-10 w-full sm:w-50"
           >
             Register Now
@@ -91,7 +99,11 @@ function App() {
         </div>
 
         <div className="flex justify-center md:justify-end items-center">
-          <img src={profileImage} alt="boy with toys" className="w-56 sm:w-72 md:w-80 lg:w-150 max-w-full h-auto" />
+          <img
+            src={profileImage}
+            alt="boy with toys"
+            className="w-56 sm:w-72 md:w-80 lg:w-150 max-w-full h-auto"
+          />
         </div>
       </div>
 
@@ -137,40 +149,39 @@ function App() {
         </div>
 
         <div className="grid grid-cols-2 gap-2.5 sm:flex sm:flex-nowrap sm:gap-0 justify-center mt-10 md:mt-16">
-  <div className="relative z-10">
-    <img
-      src={frame1}
-      alt="first children group photo"
-      className="w-full sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 aspect-square rounded-full object-cover border-4 border-[#F59E0B]"
-    />
-  </div>
-  <div className="relative z-20 -ml-8 md:-ml-10">
-    <img
-      src={frame2}
-      alt="second children group photo"
-      className="w-full sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 aspect-square rounded-full object-cover border-4 border-emerald-300"
-    />
-  </div>
-  <div className="relative z-30 sm:-ml-4 md:-ml-8 lg:-ml-10">
-    <img
-      src={frame3}
-      alt="third children group photo"
-      className="w-full sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 aspect-square rounded-full object-cover border-4 border-[#F59E0B]"
-    />
-  </div>
-  <div className="relative z-40 -ml-8 md:-ml-10">
-    <img
-      src={frame4}
-      alt="fourth children group photo"
-      className="w-full sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 aspect-square rounded-full object-cover border-4 border-emerald-300"
-    />
-  </div>
-</div>
+          <div className="relative z-10">
+            <img
+              src={frame1}
+              alt="first children group photo"
+              className="w-full sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 aspect-square rounded-full object-cover border-4 border-[#F59E0B]"
+            />
+          </div>
+          <div className="relative z-20 -ml-8 md:-ml-10">
+            <img
+              src={frame2}
+              alt="second children group photo"
+              className="w-full sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 aspect-square rounded-full object-cover border-4 border-emerald-300"
+            />
+          </div>
+          <div className="relative z-30 sm:-ml-4 md:-ml-8 lg:-ml-10">
+            <img
+              src={frame3}
+              alt="third children group photo"
+              className="w-full sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 aspect-square rounded-full object-cover border-4 border-[#F59E0B]"
+            />
+          </div>
+          <div className="relative z-40 -ml-8 md:-ml-10">
+            <img
+              src={frame4}
+              alt="fourth children group photo"
+              className="w-full sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 aspect-square rounded-full object-cover border-4 border-emerald-300"
+            />
+          </div>
+        </div>
       </div>
 
       <Form />
     </div>
-   
   );
 }
 
