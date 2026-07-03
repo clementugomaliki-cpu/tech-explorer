@@ -17,7 +17,13 @@ export default function Form() {
     guardian_email: "",
     pickup_name: "",
     pickup_phone: "",
+    payment_url: "",
   });
+  const [file, setFile] = useState(null);
+
+  const handleFileChange = (e) => {
+    setFile(e.target.files[0]);
+  };
 
   const handleClick = () => {
     fileInput.current.click();
@@ -25,7 +31,33 @@ export default function Form() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { error } = await supabase.from("registrations").insert([formData]);
+
+    if (!file) {
+      alert("Please upload payment evidence.");
+      return;
+    }
+
+    const filePath = `${Date.now()}_${file.name}`;
+
+    const { error: uploadError } = await supabase.storage
+      .from("payment_evidence")
+      .upload(filePath, file);
+
+    if (uploadError) {
+      console.error(uploadError);
+      alert("File upload failed.");
+      return;
+    }
+
+    const { data: urlData } = supabase.storage
+      .from("payment_evidence")
+      .getPublicUrl(filePath);
+
+    const paymentUrl = urlData.publicUrl;
+
+    const { error } = await supabase
+      .from("registrations")
+      .insert([{ ...formData, payment_url: paymentUrl }]);
     if (error) {
       console.error(error);
       alert("Registration failed.");
@@ -39,7 +71,9 @@ export default function Form() {
       guardian_email: "",
       pickup_name: "",
       pickup_phone: "",
+      payment_url: "",
     });
+    setFile(null);
   };
 
   const handleChange = (e) => {
@@ -196,6 +230,7 @@ export default function Form() {
                 ref={fileInput}
                 accept=".png,.jpg,.jpeg,.pdf"
                 className="hidden"
+                onChange={handleFileChange}
               />
             </div>
           </div>
