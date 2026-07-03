@@ -5,7 +5,7 @@ import cloud from "./images/cloud.png";
 import mark from "./images/mark.png";
 
 export default function Form() {
-  const input = "border border-[#E1E1E1] rounded-xl w-full px-3 py-3 sm:py-4 ";
+  const input = "border border-[#E1E1E1] rounded-xl w-full focus:outline focus:outline-orange-500 px-3 py-3 sm:py-4 ";
   const fileInput = useRef(null);
   const [modal, setModal] = useState(false);
 
@@ -19,7 +19,7 @@ export default function Form() {
   };
 
   return (
-    <div className="mx-4 my-6 sm:mx-6 sm:my-8 md:m-9" id="register-form">
+    <div className="mx-14 my-6 sm:mx-6 sm:my-8 md:m-9" id="register-form">
       <div>
         <h2 className="font-fredoka font-semibold text-2xl sm:text-3xl md:text-[32px] text-[#222222] text-center">
           Secure Your Child's Spot
@@ -48,7 +48,7 @@ export default function Form() {
             >
               Age
             </label>
-            <input type="text" id="age" className={input} />
+            <input type="text" id="age" className={input}  />
           </div>
           <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
             <label
@@ -57,7 +57,7 @@ export default function Form() {
             >
               Guardian's phone number
             </label>
-            <input type="tel" id="num" className={input} />
+            <input type="tel" id="num" className={input}  />
           </div>
           <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
             <label
@@ -66,7 +66,7 @@ export default function Form() {
             >
               Guardian's email address
             </label>
-            <input type="email" id="email" className={input} />
+            <input type="email" id="email" className={input}  />
           </div>
           <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
             <label
@@ -75,7 +75,7 @@ export default function Form() {
             >
               Name of pick up person
             </label>
-            <input type="text" id="pickup" className={input} />
+            <input type="text" id="pickup" className={input}  />
           </div>
           <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
             <label
@@ -84,16 +84,16 @@ export default function Form() {
             >
               Phone number of pick up person
             </label>
-            <input type="tel" id="picknum" className={input} />
+            <input type="tel" id="picknum" className={input}  />
           </div>
           <div className="flex flex-col gap-3 mb-3 md:flex-row md:items-center">
             <p className="font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
               Upload payment evidence
             </p>
-            <div className="border border-[#D6D3D3] w-full sm:w-70 px-4 py-1 rounded-3xl ">
+            <div className="border border-[#D6D3D3] w-full sm:w-70 px-4 py-1 rounded-3xl bg-[#FFF8E7]">
               <div className="flex items-center gap-2">
                 <img src={bank} alt="bank" className="size-6" />
-                <p className="font-inter font-light text-[12px] text-[#222222]">
+                <p className="font-inter font-light text-[12px] text-[#222222] ">
                   First Bank PLC 1234567890
                 </p>
               </div>

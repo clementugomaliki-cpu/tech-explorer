@@ -1,7 +1,7 @@
 import React from "react";
 import TechKidsCourses from "./Components/TechKidsCourses";
 import logo from "./images/olotuLogo.png";
-import profileImage from "./images/right-grid-boy-photo.png";
+import profileImage from "./images/photo.png";
 import rectangleImage from "./images/Rectangle.png";
 import brainImage from "./images/brain.png";
 import settingsIcon from "./images/settings.png";
@@ -54,18 +54,18 @@ function App() {
 
   return (
   
-    <div>
+    <div >
       <header className="bg-[#F59E0B] flex justify-between items-center fixed top-0 right-0 left-0 z-50 px-3 sm:px-6 lg:px-10 py-2">
         <img src={logo} alt="olotu square logo" className="w-24 sm:w-32 md:w-40 lg:w-50" />
         <a href="#register-form"  className="bg-white text-[#F59E0B] font-inter px-3 sm:px-5 lg:px-8 text-xs sm:text-sm md:text-base lg:text-[20px] cursor-pointer rounded-xl flex items-center justify-center h-8 sm:h-9 lg:h-10">Register Now</a> 
       </header>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 pt-20 sm:pt-24 md:pt-28 px-4 sm:px-6 md:px-10">
-        <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left mx-auto md:mx-0 max-w-xl">
-          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-0">
+        <div className="flex flex-col justify-center text-left md:items-start text-center md:text-left mx-auto md:mx-0 max-w-xl">
+          <div className="flex flex-col text-left sm:flex-row sm:items-center gap-2 sm:gap-0">
             <p className="font-inter text-sm sm:text-base md:text-lg lg:text-[20px]">
               Tech Explorer's Bootcamp 2
             </p>
-            <span className="bg-[#ECFDF5] text-[#10B981] font-fredoka-one text-xs sm:text-sm md:text-[14px] sm:ml-2 px-4 sm:px-7 py-2 border border-[#10B981] rounded-3xl w-fit mx-auto sm:mx-0">
+            <span className="bg-[#ECFDF5] text-[#10B981] font-fredoka-one text-xs sm:text-sm md:text-[14px] sm:ml-2 px-4 sm:px-7 py-2 border border-[#10B981] rounded-3xl w-fit sm:mx-0">
               for kids aged 5-15
             </span>
           </div>
@@ -108,7 +108,7 @@ function App() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 lg:gap-20 px-4 sm:px-8 md:px-16 my-10 md:my-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 lg:gap-20 px-16 sm:px-8 md:px-16 my-10 md:my-16">
         {coursesCard.map((course, index) => (
           <TechKidsCourses
             key={index}
@@ -136,34 +136,36 @@ function App() {
           <p>Networking</p>
         </div>
 
-        <div className="flex flex-wrap sm:flex-nowrap justify-center gap-3 sm:gap-0 mt-10 md:mt-16">
-          <div className="relative z-10">
-            <img src={frame1} alt="first children group photo"
-              className="w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full object-cover border-4 border-orange-500"
-            />
-          </div>
-          <div className="relative z-20 sm:-ml-4 md:-ml-8 lg:-ml-10">
-            <img
-              src={frame2}
-              alt="second children group photo"
-              className="w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full object-cover border-4 border-emerald-300"
-            />
-          </div>
-          <div className="relative z-30 sm:-ml-4 md:-ml-8 lg:-ml-10">
-            <img
-              src={frame3}
-              alt="third children group photo"
-              className="w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full object-cover border-4 border-orange-500"
-            />
-          </div>
-          <div className="relative z-40 sm:-ml-4 md:-ml-8 lg:-ml-10">
-            <img
-              src={frame4}
-              alt="fourth children group photo"
-              className="w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full object-cover border-4 border-emerald-300"
-            />
-          </div>
-        </div>
+        <div className="grid grid-cols-2 gap-2.5 sm:flex sm:flex-nowrap sm:gap-0 justify-center mt-10 md:mt-16">
+  <div className="relative z-10">
+    <img
+      src={frame1}
+      alt="first children group photo"
+      className="w-full sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 aspect-square rounded-full object-cover border-4 border-[#F59E0B]"
+    />
+  </div>
+  <div className="relative z-20 -ml-8 md:-ml-10">
+    <img
+      src={frame2}
+      alt="second children group photo"
+      className="w-full sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 aspect-square rounded-full object-cover border-4 border-emerald-300"
+    />
+  </div>
+  <div className="relative z-30 sm:-ml-4 md:-ml-8 lg:-ml-10">
+    <img
+      src={frame3}
+      alt="third children group photo"
+      className="w-full sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 aspect-square rounded-full object-cover border-4 border-[#F59E0B]"
+    />
+  </div>
+  <div className="relative z-40 -ml-8 md:-ml-10">
+    <img
+      src={frame4}
+      alt="fourth children group photo"
+      className="w-full sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 aspect-square rounded-full object-cover border-4 border-emerald-300"
+    />
+  </div>
+</div>
       </div>
 
       <Form />
