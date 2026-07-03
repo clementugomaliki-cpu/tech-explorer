@@ -18,6 +18,9 @@ export default function Form() {
     pickup_name: "",
     pickup_phone: "",
   });
+  const [file, setFile] = useState(null);
+
+  const handleFileChange = (e) => {};
 
   const handleClick = () => {
     fileInput.current.click();
