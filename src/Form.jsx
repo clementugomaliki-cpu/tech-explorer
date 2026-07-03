@@ -1,5 +1,6 @@
 import React from "react";
 import { useRef, useState } from "react";
+import { supabase } from "./supabaseClient.js";
 import bank from "./images/bank.png";
 import cloud from "./images/cloud.png";
 import mark from "./images/mark.png";
@@ -8,14 +9,45 @@ export default function Form() {
   const input = "border border-[#E1E1E1] rounded-xl w-full focus:outline focus:outline-orange-500 px-3 py-3 sm:py-4 ";
   const fileInput = useRef(null);
   const [modal, setModal] = useState(false);
+  const [formData, setFormData] = useState({
+    child_name: "",
+    age: "",
+    guardian_phone: "",
+    guardian_email: "",
+    pickup_name: "",
+    pickup_phone: "",
+  });
 
   const handleClick = () => {
     fileInput.current.click();
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setModal(!modal);
+    const { error } = await supabase.from("registrations").insert([formData]);
+    if (error) {
+      console.error(error);
+      alert("Registration failed.");
+      return;
+    }
+    setModal(true);
+    setFormData({
+      child_name: "",
+      age: "",
+      guardian_phone: "",
+      guardian_email: "",
+      pickup_name: "",
+      pickup_phone: "",
+    });
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
   return (
@@ -30,16 +62,26 @@ export default function Form() {
           Fill in the details below to complete registration
         </p>
       </div>
-      <form className="grid justify-items-center w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 border border-[#E1E1E1] rounded-2xl w-full px-4 sm:px-6 py-8 sm:py-10 md:py-15">
-          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
+      <form
+        onSubmit={handleSubmit}
+        className="grid justify-items-center w-full"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 border border-[#E1E1E1]  rounded-2xl w-full px-6 py-15">
+          <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-[20px] text-[#222222]">
             <label
               htmlFor="name"
               className="block font-inter font-regular text-base sm:text-lg md:text-[20px] text-[#222222]"
             >
               Child's full name
             </label>
-            <input type="text" id="name" className={input} />
+            <input
+              type="text"
+              id="name"
+              className={input}
+              name="child_name"
+              value={formData.child_name}
+              onChange={handleChange}
+            />
           </div>
           <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
             <label
@@ -48,7 +90,17 @@ export default function Form() {
             >
               Age
             </label>
+
             <input type="text" id="age" className={input}  />
+            <input
+              type="text"
+              id="age"
+              className={input}
+              name="age"
+              value={formData.age}
+              onChange={handleChange}
+            />
+
           </div>
           <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
             <label
@@ -58,6 +110,14 @@ export default function Form() {
               Guardian's phone number
             </label>
             <input type="tel" id="num" className={input}  />
+            <input
+              type="tel"
+              id="num"
+              className={input}
+              name="guardian_phone"
+              value={formData.guardian_phone}
+              onChange={handleChange}
+            />
           </div>
           <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
             <label
@@ -66,7 +126,17 @@ export default function Form() {
             >
               Guardian's email address
             </label>
+
             <input type="email" id="email" className={input}  />
+            <input
+              type="email"
+              id="email"
+              className={input}
+              name="guardian_email"
+              value={formData.guardian_email}
+              onChange={handleChange}
+            />
+
           </div>
           <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
             <label
@@ -75,7 +145,14 @@ export default function Form() {
             >
               Name of pick up person
             </label>
-            <input type="text" id="pickup" className={input}  />
+            <input
+              type="text"
+              id="pickup"
+              className={input}
+              name="pickup_name"
+              value={formData.pickup_name}
+              onChange={handleChange}
+            />
           </div>
           <div className="flex flex-col gap-2 mb-2 font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
             <label
@@ -84,7 +161,14 @@ export default function Form() {
             >
               Phone number of pick up person
             </label>
-            <input type="tel" id="picknum" className={input}  />
+            <input
+              type="tel"
+              id="picknum"
+              className={input}
+              name="pickup_phone"
+              value={formData.pickup_phone}
+              onChange={handleChange}
+            />
           </div>
           <div className="flex flex-col gap-3 mb-3 md:flex-row md:items-center">
             <p className="font-inter font-normal text-base sm:text-lg md:text-[20px] text-[#222222]">
@@ -105,6 +189,7 @@ export default function Form() {
           >
             <div className="flex flex-col sm:flex-row items-center gap-2 w-full md:justify-center text-center sm:text-left">
               <img src={cloud} alt="cloud" className=" size-6" />
+
               <div className="text-center font-inter font-light text-sm sm:text-base text-[#222222] ">
                 <p>Drag & drop or click upload </p>
                 <p>[PNG,JPEG,PDF]</p>
@@ -120,7 +205,6 @@ export default function Form() {
           </div>
           <div className="  flex items-center justify-center  mb-2  w-full  py-3 md:col-span-2 ">
             <button
-              onClick={handleSubmit}
               type="submit"
               className=" bg-[#F59E0B] cursor-pointer font-inter w-full  rounded-[10px] font-normal text-base sm:text-lg md:text-[20px] px-6 py-2  text-[#FFFFFF] max-w-sm"
             >
@@ -145,14 +229,16 @@ export default function Form() {
           <div className="bg-black/50 z-1000 fixed inset-0 flex items-center justify-center h-screen px-4">
             <div className="bg-[#FFFFFF] px-8 py-10 sm:px-12 sm:py-12 md:px-20 md:py-15 rounded-2xl w-full max-w-sm sm:max-w-md md:max-w-lg">
               <div className="flex flex-col items-center justify-center">
-                <img src={mark} alt="mark" className="size-16 sm:size-20 md:size-30.25" />
+                <img
+                  src={mark}
+                  alt="mark"
+                  className="size-16 sm:size-20 md:size-30.25"
+                />
                 <div className="font-inter font-light text-base sm:text-lg md:text-[20px] text-center">
                   <p>Thank you for registration!</p>
                 </div>
                 <div className="mt-5 font-inter font-light text-sm sm:text-base text-center">
-                  <p>
-                    You will receive a confirmation mail within 24 hours
-                  </p>
+                  <p>You will receive a confirmation mail within 24 hours</p>
                 </div>
                 <div className="w-full flex items-center justify-center mt-8">
                   <button
