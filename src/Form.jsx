@@ -183,9 +183,7 @@ export default function Form() {
             <div className="flex items-center gap-2 w-full md:justify-center ">
               <img src={cloud} alt="cloud" className=" size-6" />
               <div className="text-center  font-inter font-light text-base text-[#222222] ">
-                <p className="whitespace-nowrap">
-                  Drag & drop or click upload{" "}
-                </p>
+                <p className="whitespace-nowrap">Drag & drop or click upload</p>
                 <p>[PNG,JPEG,PDF]</p>
               </div>
 
