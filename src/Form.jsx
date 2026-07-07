@@ -86,7 +86,10 @@ export default function Form() {
   };
 
   return (
-    <div className="mx-14 my-6 sm:mx-6 sm:my-8 md:m-9" id="register-form">
+    <div
+      className=" max-w-7xl mx-auto px-4 py-6 my-6 sm:px-6 sm:py-8 md:py-9"
+      id="register-form"
+    >
       <div>
         <h2 className="font-fredoka font-semibold text-2xl sm:text-3xl md:text-[32px] text-[#222222] text-center">
           Secure Your Child's Spot
