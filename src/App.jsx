@@ -150,33 +150,52 @@ function App() {
           <p>Networking</p>
         </div>
 
-        <div className="grid grid-cols-2 gap-2.5 pl-4 sm:flex sm:flex-nowrap sm:gap-0 justify-between mt-10 md:mt-16">
+        <div
+          className="
+    grid grid-cols-2
+    justify-items-center
+    gap-y-4
+
+    sm:flex
+    sm:justify-center
+    sm:items-center
+
+    w-fit
+    sm:w-full
+    mx-auto
+
+    mt-10 md:mt-16
+  "
+        >
           <div className="relative z-10">
             <img
               src={frame1}
               alt="first children group photo"
-              className="w-48 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 aspect-square rounded-full object-cover border-4 border-[#F59E0B]"
+              className="w-40 h-40 md:w-70 md:h-70 rounded-full object-cover border-4 border-[#F59E0B]"
             />
           </div>
-          <div className="relative z-20 -ml-8 md:-ml-10">
+
+          <div className="relative z-20 -ml-10 md:-ml-10">
             <img
               src={frame2}
               alt="second children group photo"
-              className="w-48 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 aspect-square rounded-full object-cover border-4 border-emerald-300"
+              className="w-40 h-40 md:w-70 md:h-70 rounded-full object-cover border-4 border-emerald-300"
             />
           </div>
-          <div className="relative z-30 sm:-ml-4 md:-ml-8 lg:-ml-10">
+
+          <div className="relative z-30">
             <img
               src={frame3}
               alt="third children group photo"
-              className="w-48 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 aspect-square rounded-full object-cover border-4 border-[#F59E0B]"
+              className="w-40 h-40 md:w-70 md:h-70 rounded-full object-cover border-4 border-[#F59E0B]"
             />
           </div>
-          <div className="relative z-40 -ml-8 md:-ml-10">
+
+          <div className="relative z-40 -ml-10 md:-ml-10">
             <img
               src={frame4}
               alt="fourth children group photo"
-              className="w-48 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 aspect-square rounded-full object-cover border-4 border-emerald-300"
+              className="w-40 h-40 md:w-70 md:h-70 rounded-full object-cover border-4 border-emerald-300"
             />
           </div>
         </div>
