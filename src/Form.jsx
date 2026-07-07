@@ -214,7 +214,7 @@ export default function Form() {
               <div className="flex items-center gap-2">
                 <img src={bank} alt="bank" className="size-6" />
                 <p className="font-inter font-light text-[12px] text-[#222222] ">
-                  First Bank PLC 1234567890
+                  Access Bank 1825769563 Olotu Square Solutions Limited
                 </p>
               </div>
             </div>
