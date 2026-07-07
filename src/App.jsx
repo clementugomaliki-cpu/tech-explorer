@@ -53,7 +53,7 @@ function App() {
   ];
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <header className="bg-[#F59E0B] flex justify-between items-center fixed top-0 right-0 left-0 z-50 px-3 sm:px-6 lg:px-10 py-2">
         <img
           src={logo}
@@ -153,7 +153,7 @@ function App() {
         </div>
 
 
-        <div className="grid grid-cols-2 gap-2.5 pl-4 sm:flex sm:flex-nowrap sm:gap-0 justify-center mt-10 md:mt-16">
+  <div className="flex flex-wrap gap-2.5 sm:flex-nowrap sm:gap-0 justify-center mt-10 md:mt-16">
   <div className="relative z-10">
     <img
       src={frame1}
