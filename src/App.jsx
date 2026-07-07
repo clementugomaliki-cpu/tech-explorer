@@ -75,7 +75,7 @@ function App() {
 
           <div className="flex flex-col text-left sm:flex-row sm:items-center gap-2 sm:gap-0">
             <p className="font-inter text-sm sm:text-base md:text-lg lg:text-[20px]">
-              Tech Explorer's Bootcamp 2
+              Tech Explorer's Bootcamp 3
             </p>
             <span className="bg-[#ECFDF5] text-[#10B981] font-fredoka-one text-xs sm:text-sm md:text-[14px] sm:ml-2 px-4 sm:px-7 py-2 border border-[#10B981] rounded-3xl w-fit sm:mx-0">
               for kids aged 5-15
