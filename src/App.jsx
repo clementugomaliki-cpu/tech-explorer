@@ -153,7 +153,7 @@ function App() {
         </div>
 
 
-        <div className="grid grid-cols-2 gap-2.5 pl-4 sm:flex sm:flex-nowrap sm:gap-0 justify-between mt-10 md:mt-16">
+        <div className="grid grid-cols-2 gap-2.5 pl-4 sm:flex sm:flex-nowrap sm:gap-0 justify-center mt-10 md:mt-16">
   <div className="relative z-10">
     <img
       src={frame1}
