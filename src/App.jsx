@@ -55,7 +55,7 @@ function App() {
   return (
     <div className="overflow-x-hidden">
       <header className="bg-[#F59E0B] fixed top-0 right-0 left-0 z-50 px-3 sm:px-6 lg:px-10 py-2">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <div className="max-w-[1920px] mx-auto flex justify-between items-center">
           <img
             src={logo}
             alt="olotu square logo"
@@ -69,7 +69,7 @@ function App() {
           </a>
         </div>
       </header>
-      <div className=" max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 pt-20 sm:pt-24 md:pt-28 px-4 sm:px-6 md:px-10">
+      <div className=" max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 pt-20 sm:pt-24 md:pt-28 px-4 sm:px-6 md:px-10">
         <div className="flex flex-col justify-center text-left md:items-start  md:text-left mx-auto md:mx-0 max-w-xl">
           <div className="flex flex-col text-left sm:flex-row sm:items-center gap-2 sm:gap-0">
             <p className="font-inter text-sm sm:text-base md:text-lg lg:text-[20px]">
@@ -109,7 +109,7 @@ function App() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto pb-10 px-4 sm:px-0">
+      <div className="max-w-[1920px] mx-auto pb-10 px-4 sm:px-0">
         <img src={rectangleImage} alt="" className="w-full h-auto" />
       </div>
 
@@ -122,7 +122,7 @@ function App() {
         </p>
       </div>
 
-      <div className=" max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 lg:gap-20 px-16 sm:px-8 md:px-16 my-10 md:my-16">
+      <div className=" max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 lg:gap-20 px-16 sm:px-8 md:px-16 my-10 md:my-16">
         {coursesCard.map((course, index) => (
           <TechKidsCourses
             key={index}
@@ -133,7 +133,7 @@ function App() {
         ))}
       </div>
 
-      <div className=" max-w-7xl mx-auto flex flex-col justify-center items-center bg-linear-to-t from-orange-100 to-white px-4 py-10 md:py-16">
+      <div className=" max-w-[1920px] mx-auto flex flex-col justify-center items-center bg-linear-to-t from-orange-100 to-white px-4 py-10 md:py-16">
         <h3 className="font-fredoka font-medium text-2xl sm:text-3xl md:text-[32px] text-[#222222] text-center">
           See the Magic in Action
         </h3>
@@ -150,11 +150,11 @@ function App() {
           <p>Networking</p>
         </div>
 
-        <div
-          className="grid grid-cols-2 justify-items-center gap-y-4 sm:flex sm:justify-center sm:items-center w-fit sm:w-full mx-auto mt-10 md:mt-16">
+        <div className="grid grid-cols-2 justify-items-center gap-y-4 sm:flex sm:justify-center sm:items-center w-fit sm:w-full mx-auto mt-10 md:mt-16">
           <div className="relative z-10">
             <img
-              src={frame1} alt="first children group photo"
+              src={frame1}
+              alt="first children group photo"
               className="w-40 h-40 md:w-70 md:h-70 rounded-full object-cover border-4 border-[#F59E0B]"
             />
           </div>

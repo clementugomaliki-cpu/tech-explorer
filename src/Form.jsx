@@ -87,7 +87,7 @@ export default function Form() {
 
   return (
     <div
-      className=" max-w-7xl mx-auto px-4 py-6 my-6 sm:px-6 sm:py-8 md:py-9"
+      className=" max-w-[1920px] mx-auto px-4 py-6 my-6 sm:px-6 sm:py-8 md:py-9"
       id="register-form"
     >
       <div>
