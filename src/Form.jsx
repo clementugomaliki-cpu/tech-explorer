@@ -7,7 +7,7 @@ import mark from "./images/mark.png";
 
 export default function Form() {
   const input =
-    "border border-[#E1E1E1] rounded-xl w-full focus:outline focus:outline-orange-500 px-3 py-3 sm:py-4 ";
+    "border border-[#E1E1E1] rounded-xl w-full focus:outline focus:outline-orange-500 px-3 h-12 ";
   const fileInput = useRef(null);
   const [modal, setModal] = useState(false);
   const [formData, setFormData] = useState({
