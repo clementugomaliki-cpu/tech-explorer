@@ -69,47 +69,47 @@ function App() {
           </a>
         </div>
       </header>
-      <div className=" max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 pt-20 sm:pt-24 md:pt-28 px-4 sm:px-6 md:px-10">
-        <div className="flex flex-col justify-center text-left md:items-start  md:text-left mx-auto md:mx-0 max-w-xl">
-          <div className="flex flex-col text-left sm:flex-row sm:items-center gap-2 sm:gap-0">
-            <p className="font-inter text-sm sm:text-base md:text-lg lg:text-[20px]">
-              Tech Explorer's Bootcamp 3
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center pt-20 sm:pt-24 md:pt-28 px-4 sm:px-6">
+          <div className="flex flex-col justify-center text-left mx-auto md:mx-0 max-w-xl w-full">
+            <div className="flex flex-col text-left sm:flex-row sm:items-center gap-2 sm:gap-0">
+              <p className="font-inter text-sm sm:text-base md:text-lg lg:text-[20px]">
+                Tech Explorer's Bootcamp 3
+              </p>
+              <span className="bg-[#ECFDF5] text-[#10B981] font-fredoka-one text-xs sm:text-sm md:text-[14px] sm:ml-2 px-4 sm:px-7 py-2 border border-[#10B981] rounded-3xl w-fit sm:mx-0">
+                for kids aged 5-15
+              </span>
+            </div>
+
+            <p className="text-[#F59E0B] font-fredoka-one text-3xl sm:text-4xl md:text-5xl lg:text-[48px] mt-4 leading-tight">
+              Build solutions,
+              <span className="block text-[#222222]">not just think them!</span>
             </p>
-            <span className="bg-[#ECFDF5] text-[#10B981] font-fredoka-one text-xs sm:text-sm md:text-[14px] sm:ml-2 px-4 sm:px-7 py-2 border border-[#10B981] rounded-3xl w-fit sm:mx-0">
-              for kids aged 5-15
-            </span>
+
+            <p className="text-[#F59E0B] text-lg sm:text-xl md:text-2xl lg:text-[32px] font-fredoka py-6 md:py-10">
+              Registration - ₦70,000,{" "}
+              <span className="text-[#10B981] text-sm sm:text-base md:text-lg lg:text-[24px] font-fredoka font-medium block sm:inline">
+                early bird ₦50,000
+              </span>
+            </p>
+
+            
+             <a href="#register-form"
+              className="bg-[#F59E0B] text-white font-inter px-8 text-base sm:text-lg lg:text-[20px] cursor-pointer rounded-xl hover:opacity-80 flex items-center justify-center h-10 w-full sm:w-50">
+            
+              Register Now
+            </a>
           </div>
 
-          <p className="text-[#F59E0B] font-fredoka-one text-3xl sm:text-4xl md:text-5xl lg:text-[48px] mt-4 leading-tight">
-            Build solutions,
-            <span className="block text-[#222222]">not just think them!</span>
-          </p>
-
-          <p className="text-[#F59E0B] text-lg sm:text-xl md:text-2xl lg:text-[32px] font-fredoka py-6 md:py-10">
-            Registration - ₦70,000,{" "}
-            <span className="text-[#10B981] text-sm sm:text-base md:text-lg lg:text-[24px] font-fredoka font-medium block sm:inline">
-              early bird ₦50,000
-            </span>
-          </p>
-
-          <a
-            href="#register-form"
-            className="bg-[#F59E0B] text-white font-inter px-8 text-base sm:text-lg lg:text-[20px] cursor-pointer rounded-xl hover:opacity-80 flex items-center justify-center h-10 w-full sm:w-50"
-          >
-            Register Now
-          </a>
+          <div className="flex justify-center items-center mx-auto md:mx-0 max-w-xl w-full">
+            <img
+              src={profileImage}
+              alt="boy with toys"
+              className="w-full h-auto"
+            />
+          </div>
         </div>
 
-        <div className="flex justify-center md:justify-end items-center">
-          <img
-            src={profileImage}
-            alt="boy with toys"
-            className="w-56 sm:w-72 md:w-80 lg:w-150 max-w-full h-auto"
-          />
-        </div>
-      </div>
-
-      <div className="max-w-[1920px] mx-auto pb-10 px-4 sm:px-0">
+      <div className="pb-10">
         <img src={rectangleImage} alt="" className="w-full h-auto" />
       </div>
 

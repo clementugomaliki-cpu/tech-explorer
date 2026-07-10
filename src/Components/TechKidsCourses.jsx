@@ -1,7 +1,7 @@
 export default function TechKidsCourses({ logo, header, text }) {
   return (
     <div className="flex flex-col border border-[#D6D3D3] rounded-xl p-5 sm:p-6 md:p-7">
-      <div className="bg-[#ECFDF5] border border-[#10B981] rounded-xl w-full flex items-center justify-center">
+      <div className="bg-[#ECFDF5] border border-[#10B981] rounded-xl w-full aspect-[3/2] flex items-center justify-center">
         {logo}
       </div>
       <div className="flex flex-col items-center justify-center text-center mt-5">
